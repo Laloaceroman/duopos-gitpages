@@ -581,10 +581,50 @@ app.scroll = {
   }
 };
 
+app.stats = {
+  init: function() {
+    var animateNumbers, duration, observer, sectionStats;
+    duration = 2000;
+    animateNumbers = function() {
+      return $('.article__number').each(function() {
+        var $element, animateNumber, finalValue, startTime, startValue;
+        $element = $(this);
+        finalValue = parseInt($element.data('value'), 10);
+        startValue = 0;
+        startTime = null;
+        animateNumber = function(timestamp) {
+          var currentValue, progress;
+          if (startTime == null) {
+            startTime = timestamp;
+          }
+          progress = timestamp - startTime;
+          currentValue = Math.min(Math.floor((progress / duration) * finalValue), finalValue);
+          $element.text("+" + currentValue);
+          if (progress < duration) {
+            return requestAnimationFrame(animateNumber);
+          }
+        };
+        return requestAnimationFrame(animateNumber);
+      });
+    };
+    observer = new IntersectionObserver(function(entries, observer) {
+      return entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          return animateNumbers();
+        }
+      });
+    });
+    sectionStats = $('.section--stats')[0];
+    if (sectionStats != null) {
+      return observer.observe(sectionStats);
+    }
+  }
+};
+
 app.swiper = {
   init: function() {
     var swiper;
-    return swiper = new Swiper('.swiper-clients', {
+    swiper = new Swiper('.swiper-clients', {
       loop: true,
       freeMode: true,
       spaceBetween: 0,
@@ -618,6 +658,19 @@ app.swiper = {
           spaceBetween: 20,
           slidesPerGroup: 1
         }
+      }
+    });
+    return swiper = new Swiper('.swiper-hero', {
+      loop: true,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      speed: 1000,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
       }
     });
   }
