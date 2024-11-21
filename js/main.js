@@ -654,7 +654,7 @@ app.swiper = {
           slidesPerGroup: 2
         },
         720: {
-          slidesPerView: 5,
+          slidesPerView: 6,
           spaceBetween: 20,
           slidesPerGroup: 1
         }
