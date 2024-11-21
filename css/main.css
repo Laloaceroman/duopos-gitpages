@@ -3908,9 +3908,11 @@ section.section--media .section__eff img {
     width: 600px;
   }
 }
-section.section--media.section--media--right .section__content {
-  margin-left: 40px;
-  margin-right: 0;
+@media (min-width: 720px) {
+  section.section--media.section--media--right .section__content {
+    margin-left: 40px;
+    margin-right: 0;
+  }
 }
 section.section--media.section--media--right .section__eff {
   right: initial;
@@ -3941,7 +3943,7 @@ section.section--media .section__img .section__img__eff img {
   width: 100px;
 }
 section.section--media .section__content {
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 }
 @media (min-width: 720px) {
   section.section--media .section__content {
