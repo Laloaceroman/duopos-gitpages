@@ -62,7 +62,7 @@ select {
   transition: 0.2s ease;
 }
 a {
-  color: #bbfb60;
+  color: #005cff;
   text-decoration: none;
 }
 a.a-classic {
@@ -1619,7 +1619,7 @@ article {
 article:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  border-color: #bbfb60;
+  border-color: rgba(0,0,0,0.3);
 }
 article .article__content p {
   font-size: 14px;
@@ -1724,8 +1724,8 @@ article.article--plan .article__text {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #bbfb60;
-  color: #091e42;
+  background-color: #005cff;
+  color: #fff;
   padding: 5px 10px;
   border-radius: 8px;
   text-align: center;
@@ -1734,6 +1734,7 @@ article.article--plan .article__text {
   font-size: 12px;
   line-height: 16px;
   font-weight: bold;
+  border: 1px solid #fff;
 }
 article.article--plan.article--plan--blue {
   background-color: #005cff;
@@ -1853,7 +1854,7 @@ article.article--plan .article__footer .btn {
   display: inline-block;
   padding: 10px 10px;
   background-color: #fff;
-  border: 1px solid #bbfb60;
+  border: 1px solid #005cff;
   color: #091e42;
   font-size: 18px;
   line-height: 22px;
@@ -1867,10 +1868,11 @@ article.article--plan .article__footer .btn {
   margin-left: 10px;
 }
 .btn:hover {
-  background-color: #bbfb60;
+  background-color: #005cff;
+  color: #fff;
 }
 .btn:hover:after {
-  background-color: #005cff;
+  background-color: #cdcdcd;
 }
 .btn:after {
   content: "";
@@ -1881,7 +1883,7 @@ article.article--plan .article__footer .btn {
           transform: translate(0%, 0%);
   width: 16px;
   height: 30px;
-  background-color: #bbfb60;
+  background-color: #005cff;
   border-radius: 5px;
   transition: 0.2s;
 }
@@ -1889,6 +1891,12 @@ article.article--plan .article__footer .btn {
   background-color: #005cff;
   border: 1px solid #005cff;
   color: #fff;
+}
+.btn.btn--secondary:hover {
+  opacity: 0.8;
+}
+.btn.btn--secondary:hover:after {
+  background-color: #cdcdcd;
 }
 .btn.btn--white {
   background-color: #fff;
@@ -2388,9 +2396,9 @@ input[type=radio] {
 }
 input[type=checkbox]:checked,
 input[type=radio]:checked {
-  background-color: #bbfb60;
+  background-color: #005cff;
   background-position: 50% 50%;
-  border-color: #bbfb60;
+  border-color: #005cff;
 }
 select {
   display: inline-block;
@@ -2535,7 +2543,7 @@ textarea {
   width: 0%;
   height: 1px;
   border-radius: 2px;
-  background: #005cff;
+  background: #cdcdcd;
   transition: 0.2s;
   z-index: 2;
 }
@@ -2642,7 +2650,7 @@ header .header__nav__mobile .header__nav__back div,
 header .header__nav .header__nav__close div,
 header .header__nav__mobile .header__nav__close div {
   height: 2px;
-  background: #bbfb60;
+  background: #005cff;
   width: 15px;
   position: absolute;
   top: 50%;
@@ -2705,7 +2713,7 @@ header .header__ham span {
   height: 3px;
   border-radius: 5px;
   margin: 0 auto 4px;
-  background: #bbfb60;
+  background: #005cff;
   width: 30px;
   transition: 0.2s ease;
 }
@@ -3180,11 +3188,11 @@ header.header--static .header__logo.header__logo--white {
   }
   header .header__nav ul li a .fa {
     margin-left: 10px;
-    color: #bbfb60;
+    color: #005cff;
     font-weight: bold;
   }
   header .header__nav ul li:hover a {
-    color: #bbfb60;
+    color: #005cff;
   }
 }
 .loader-space {
@@ -3254,7 +3262,7 @@ header.header--static .header__logo.header__logo--white {
   background: transparent;
 }
 .form__loader .loader svg circle {
-  stroke: #bbfb60;
+  stroke: #005cff;
 }
 @-webkit-keyframes loaderRotate {
   100% {
@@ -3409,7 +3417,7 @@ header.header--static .header__logo.header__logo--white {
   position: absolute;
   top: 0px;
   right: 0px;
-  color: #bbfb60;
+  color: #005cff;
   opacity: 1;
   font-weight: bold;
   font-size: 16px;
@@ -3492,8 +3500,8 @@ section .section__title {
 section .section__subtitle {
   display: inline-block;
   background-color: #fff;
-  border: 1px solid #bbfb60;
-  color: #bbfb60;
+  border: 1px solid #005cff;
+  color: #005cff;
   padding: 5px 10px;
   min-width: 150px;
   border-radius: 8px;
@@ -3605,7 +3613,7 @@ section .section__content ul li:before {
   text-align: center;
   border-radius: 50%;
   overflow: initial;
-  background-color: #005cff;
+  background-color: #cdcdcd;
 }
 @media (min-width: 480px) {
   section .section__content.section__content--2col {
@@ -3740,11 +3748,11 @@ section.section--white {
   color: #091e42;
 }
 section.section--color-primary {
-  background: #bbfb60;
+  background: #005cff;
   color: #fff;
 }
 section.section--color-secundary {
-  background: #bbfb60;
+  background: #005cff;
   color: #fff;
 }
 section.section--gray {
@@ -3783,6 +3791,7 @@ section.section--hero .section__eff {
   position: absolute;
   bottom: 0%;
   left: 0%;
+  opacity: 0.1;
 }
 section.section--hero .section__eff img {
   width: 100%;
@@ -3838,7 +3847,7 @@ section.section--login {
 }
 section.section--login .section__bg {
   height: 50%;
-  background-color: #bbfb60;
+  background-color: #005cff;
 }
 @media (min-width: 720px) {
   section.section--login .section__bg {
@@ -4085,7 +4094,7 @@ section.section--demo {
 }
 section.section--demo .section__bg {
   height: 50%;
-  background-color: #bbfb60;
+  background-color: #005cff;
 }
 section.section--demo .section__bg .bg {
   opacity: 0.5;
@@ -4215,7 +4224,7 @@ section.section--clients .section__clients .section__client .section__icon img {
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #005cff;
+  --swiper-theme-color: #cdcdcd;
 }
 .swiper-container {
   margin-left: auto;
@@ -4363,7 +4372,7 @@ section.section--clients .section__clients .section__client .section__icon img {
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
-  background-color: #bbfb60;
+  background-color: #005cff;
   color: #fff;
   width: 50px;
   height: 50px;
@@ -4421,7 +4430,7 @@ section.section--clients .section__clients .section__client .section__icon img {
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background-color: #fff;
-  color: #bbfb60;
+  color: #005cff;
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -4844,7 +4853,7 @@ section.section--clients .section__clients .section__client .section__icon img {
   position: absolute;
   top: 0;
   left: 0;
-  color: #bbfb60;
+  color: #005cff;
 }
 .wp blockquote {
   padding: 10px 10px;
