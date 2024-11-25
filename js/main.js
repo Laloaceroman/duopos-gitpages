@@ -451,13 +451,20 @@ app.scroll = {
       }
     });
     $("[data-goto]").click(function(e) {
+      var basePath, currentPath, gotoSection;
       e.preventDefault();
-      app.scroll.goto($(this).attr("data-goto"));
-      return console.log("data");
+      gotoSection = $(this).attr("data-goto");
+      currentPath = window.location.pathname;
+      basePath = currentPath.substring(0, currentPath.lastIndexOf("/"));
+      if (!currentPath.includes("index.html")) {
+        return window.location.href = basePath + "/index.html#" + gotoSection.replace(".section--", "");
+      } else {
+        return app.scroll.goto(gotoSection);
+      }
     });
     hash = window.location.hash.replace("#", "");
     if (hash !== "") {
-      return app.scroll.goto($(".section--" + hash));
+      return app.scroll.goto(".section--" + hash);
     }
   },
   trigger: function() {
@@ -539,14 +546,14 @@ app.scroll = {
     if (seconds == null) {
       seconds = 1000;
     }
-    from = $("[data-goto='" + to + "']");
-    if (!add) {
-      add = $("header").height() + 80;
-      if (from.closest("[sticky]").length) {
-        add += from.closest("[sticky]").height();
+    if (typeof to === "string" && $(to).length) {
+      from = $("[data-goto='" + to + "']");
+      if (!add) {
+        add = $("header").height() + 80;
+        if (from.closest("[sticky]").length) {
+          add += from.closest("[sticky]").height();
+        }
       }
-    }
-    if ($(to).length) {
       top = $(to).offset().top - add;
       return $("body,html").animate({
         scrollTop: top
