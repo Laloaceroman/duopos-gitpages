@@ -3770,13 +3770,13 @@ section.section--hero .section__bg .bg {
 }
 section.section--hero .section__eff {
   position: absolute;
-  bottom: 0%;
-  left: 0%;
-  opacity: 0.1;
+  bottom: 5%;
+  left: 5%;
+  opacity: 0.3;
 }
 section.section--hero .section__eff img {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
 }
 section.section--hero .section__content {
   background-color: rgba(255,255,255,0.9);
@@ -3843,13 +3843,13 @@ section.section--login .section__bg .bg {
 }
 section.section--login .section__eff {
   position: absolute;
-  bottom: -10%;
-  left: -10%;
-  opacity: 0.08;
+  bottom: 5%;
+  left: 5%;
+  opacity: 0.3;
 }
 section.section--login .section__eff img {
   width: 100%;
-  max-width: 800px;
+  max-width: 450px;
 }
 section.section--login .section__content {
   background-color: rgba(255,255,255,0.9);
@@ -3903,16 +3903,16 @@ section.section--stats {
 }
 section.section--media .section__eff {
   position: absolute;
-  bottom: -10%;
-  right: 10%;
-  opacity: 1;
+  bottom: 5%;
+  right: 5%;
+  opacity: 0.3;
 }
 section.section--media .section__eff img {
   width: 200px;
 }
 @media (min-width: 720px) {
   section.section--media .section__eff img {
-    width: 600px;
+    width: 400px;
   }
 }
 @media (min-width: 720px) {
